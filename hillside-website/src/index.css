@@ -110,6 +110,121 @@
     filter: drop-shadow(0 0 8px rgb(193 90 58 / 0.35));
   }
 
+  /* Hero interactive scene */
+  .hero-social-float {
+    animation: hero-float-y 3.8s ease-in-out infinite;
+  }
+
+  .hero-social-float-delay-1 {
+    animation-delay: -1.25s;
+  }
+
+  .hero-social-float-delay-2 {
+    animation-delay: -2.5s;
+  }
+
+  .hero-orbit-icons {
+    animation: hero-orbit-icons-spin 14s linear infinite;
+  }
+
+  .hero-scan-line {
+    animation: hero-scan-line-move 2.4s ease-in-out infinite;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgb(250 249 245 / 0.22),
+      rgb(193 90 58 / 0.18),
+      rgb(250 249 245 / 0.16),
+      transparent
+    );
+  }
+
+  .hero-typing-dot {
+    animation: hero-typing-dot 1.2s ease-in-out infinite;
+  }
+
+  .hero-typing-dot:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  .hero-typing-dot:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .hero-scene-glow-pulse {
+    animation: hero-scene-glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes hero-float-y {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes hero-orbit-icons-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes hero-scan-line-move {
+    0% {
+      transform: translateY(-115%);
+      opacity: 0;
+    }
+    12% {
+      opacity: 1;
+    }
+    88% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(115%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes hero-typing-dot {
+    0%,
+    80%,
+    100% {
+      transform: translateY(0);
+      opacity: 0.35;
+    }
+    40% {
+      transform: translateY(-3px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes hero-scene-glow-pulse {
+    0%,
+    100% {
+      opacity: 0.45;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.04);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-social-float,
+    .hero-social-float-delay-1,
+    .hero-social-float-delay-2,
+    .hero-orbit-icons,
+    .hero-scan-line,
+    .hero-typing-dot,
+    .hero-scene-glow-pulse {
+      animation: none !important;
+    }
+  }
+
   /* Home page section polish */
   .home-section-glow {
     background:
