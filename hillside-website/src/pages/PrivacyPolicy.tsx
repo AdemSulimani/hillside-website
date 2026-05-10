@@ -87,11 +87,6 @@ export function PrivacyPolicy() {
             <strong>onboarding and configuration data:</strong> platform setup
             preferences, business settings, and feature configurations; and
           </li>
-          <li>
-            <strong>billing and payment information:</strong> as necessary to
-            process fees, including payment method details handled via our payment
-            processors.
-          </li>
         </ul>
 
         <h3>2.2 Connected Channel Data</h3>
@@ -557,9 +552,7 @@ export function PrivacyPolicy() {
 
         <h3>10.4 Billing Records</h3>
         <p>
-          Billing event records, invoices, and commission calculation data are
-          retained for the period required by applicable tax, accounting, and
-          commercial law, or as otherwise required by applicable legal obligations.
+        Billing event records, invoices, and commission calculation data are retained for the period required by applicable tax, accounting, and commercial law, or as otherwise required by applicable legal obligations.
         </p>
       </section>
 
