@@ -10,7 +10,7 @@ export function PrivacyPolicy() {
           <p className="text-ink">
             <strong>Effective Date:</strong> April 14, 2026
             <br />
-            <strong>Last Updated:</strong> May 3, 2026
+            <strong>Last Updated:</strong> May 10, 2026
           </p>
           <p className="mt-8 font-display text-base font-semibold text-ink">
             Data deletion requests
