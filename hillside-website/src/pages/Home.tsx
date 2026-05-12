@@ -324,10 +324,7 @@ export function Home() {
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-28 lg:pt-20">
           <div className="flex flex-col items-center gap-12 lg:gap-16">
             <div className="mx-auto max-w-3xl text-center">
-              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-ink-faint sm:text-xs">
-                Hillside L.L.C. · Kosovo
-              </p>
-              <h1 className="mt-4 font-display text-[2.35rem] font-semibold leading-[1.12] tracking-[-0.02em] text-ink sm:text-5xl sm:leading-[1.08] lg:text-[2.85rem] lg:leading-[1.06]">
+              <h1 className="font-display text-[2.35rem] font-semibold leading-[1.12] tracking-[-0.02em] text-ink sm:text-5xl sm:leading-[1.08] lg:text-[2.85rem] lg:leading-[1.06]">
                 One calm inbox for social messages, orders, and AI-assisted
                 replies.
               </h1>
