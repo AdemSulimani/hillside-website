@@ -124,9 +124,9 @@ const PLATFORM_PRINCIPLES = [
 
 function PlatformPrinciplesRail() {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-paper/85 p-6 shadow-lift backdrop-blur-[2px] sm:p-7">
+    <div className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-border-strong bg-paper/85 p-6 shadow-lift backdrop-blur-[2px] sm:p-7">
       <div className="pointer-events-none absolute inset-0 platform-live-shimmer opacity-60" aria-hidden />
-      <div className="relative flex items-center justify-between gap-3 border-b border-border pb-4">
+      <div className="relative flex shrink-0 items-center justify-between gap-3 border-b border-border pb-4">
         <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-faint">
           Principles
         </p>
@@ -134,24 +134,27 @@ function PlatformPrinciplesRail() {
           Non‑negotiables
         </span>
       </div>
-      <ol className="relative mt-6 space-y-5">
-        {PLATFORM_PRINCIPLES.map((text, i) => (
-          <li key={text} className="relative flex gap-4 pl-1">
-            {i < PLATFORM_PRINCIPLES.length - 1 ? (
-              <span
-                className="absolute left-[22px] top-9 h-[calc(100%+0.25rem)] w-px platform-rail-line"
-                aria-hidden
-              />
-            ) : null}
-            <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border-strong bg-paper font-mono text-[11px] font-semibold text-ink shadow-soft">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <p className="pt-1.5 font-display text-[15px] font-medium leading-snug text-ink">
-              {text}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="relative flex min-h-0 flex-1 flex-col">
+        <ol className="relative mt-6 space-y-5">
+          {PLATFORM_PRINCIPLES.map((text, i) => (
+            <li key={text} className="relative flex gap-4 pl-1">
+              {i < PLATFORM_PRINCIPLES.length - 1 ? (
+                <span
+                  className="absolute left-[22px] top-9 h-[calc(100%+0.25rem)] w-px platform-rail-line"
+                  aria-hidden
+                />
+              ) : null}
+              <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border-strong bg-paper font-mono text-[11px] font-semibold text-ink shadow-soft">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <p className="pt-1.5 font-display text-[15px] font-medium leading-snug text-ink">
+                {text}
+              </p>
+            </li>
+          ))}
+        </ol>
+        <div className="min-h-0 flex-1" aria-hidden />
+      </div>
     </div>
   )
 }
@@ -395,12 +398,12 @@ export function Home() {
             </div>
           </header>
 
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-7">
-            <div className="lg:col-span-8">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-stretch lg:gap-7">
+            <div className="flex min-h-0 flex-col lg:col-span-8">
               <PlatformFeaturedCard />
             </div>
 
-            <aside className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
+            <aside className="flex min-h-0 flex-col lg:col-span-4">
               <PlatformPrinciplesRail />
             </aside>
 
